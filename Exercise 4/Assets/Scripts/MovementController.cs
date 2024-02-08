@@ -28,7 +28,7 @@ public class MovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //do checks for object position here to make it stay within bounds, wrap the movement
+        //do checks for object position here to make it stay within bounds, wrap the movement - make it a method that you pass a vecotor into :)))))
 
         //Velocity is direction * speed * deltaTime
         velocity = direction * speed * Time.deltaTime;
