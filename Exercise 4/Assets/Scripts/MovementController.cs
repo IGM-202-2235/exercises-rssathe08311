@@ -28,6 +28,8 @@ public class MovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //do checks for object position here to make it stay within bounds, wrap the movement
+
         //Velocity is direction * speed * deltaTime
         velocity = direction * speed * Time.deltaTime;
 
