@@ -12,6 +12,8 @@ public class MovementController : MonoBehaviour
 
     [SerializeField] float speed;
 
+    [SerializeField] Camera cameraObject;
+
     public Vector3 Direction
     {
         set { direction = value.normalized; }
@@ -30,6 +32,8 @@ public class MovementController : MonoBehaviour
     {
         //do checks for object position here to make it stay within bounds, wrap the movement - make it a method that you pass a vecotor into :)))))
 
+        ScreenWrap();
+
         //Velocity is direction * speed * deltaTime
         velocity = direction * speed * Time.deltaTime;
 
@@ -45,6 +49,21 @@ public class MovementController : MonoBehaviour
         {
             //Set the vehicle's rotation to match the direction
             transform.rotation = Quaternion.LookRotation(Vector3.back, direction);
+        }
+    }
+
+    void ScreenWrap()
+    {
+        float totalCamHeight = (cameraObject.orthographicSize * 2f) / 2;
+        float totalCamWidth = (totalCamHeight * cameraObject.aspect);
+
+        if ((objectPosition.y >= totalCamHeight) || (objectPosition.y <= (totalCamHeight * -1)))
+        {
+            objectPosition.y *= -1;
+        }
+        if ((objectPosition.x >= totalCamWidth) || (objectPosition.x <= (totalCamWidth * -1)))
+        {
+            objectPosition.x *= -1;
         }
     }
 }

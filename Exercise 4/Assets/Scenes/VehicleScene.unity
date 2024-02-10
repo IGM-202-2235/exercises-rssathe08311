@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: speed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -5634568703355689134, guid: 040112aea045c9042a677992ddcb7696, type: 3}
+      propertyPath: cameraObject
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 4926470906182271617, guid: 040112aea045c9042a677992ddcb7696, type: 3}
       propertyPath: m_Name
       value: Vehicle
@@ -149,11 +153,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7204789788662128337, guid: 040112aea045c9042a677992ddcb7696, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.9458218
+      value: -0.67
       objectReference: {fileID: 0}
     - target: {fileID: 7204789788662128337, guid: 040112aea045c9042a677992ddcb7696, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.9476583
+      value: -2.79
       objectReference: {fileID: 0}
     - target: {fileID: 7204789788662128337, guid: 040112aea045c9042a677992ddcb7696, type: 3}
       propertyPath: m_LocalPosition.z
