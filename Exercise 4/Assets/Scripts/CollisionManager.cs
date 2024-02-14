@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CollisionManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class CollisionManager : MonoBehaviour
     [SerializeField] List<SpriteInfo> sprites = new List<SpriteInfo>();//player should be the first index for simplicities sake
 
     [SerializeField] bool aabbCol;
+
+    [SerializeField] TextMesh instruction;
 
 
     // Start is called before the first frame update
@@ -20,19 +23,25 @@ public class CollisionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Mouse.current.leftButton.IsPressed())
         {
             if (aabbCol)
             {
                 aabbCol = false;
+                instruction.text = "Collision Mode: Circle Collision \nClick to change collision mode";
+                
             }
             else
             {
                 aabbCol = true;
+                instruction.text = "Collision Mode: AABB Collision \nClick to change collision mode";
             }
         }
-        */
+
+        for(int i = 0; i < sprites.Count; i++)
+        {
+            sprites[i].spriteRenderer.color = Color.white;
+        }
 
         for(int i = 1; i < sprites.Count; i++)
         {
@@ -44,12 +53,6 @@ public class CollisionManager : MonoBehaviour
                     sprites[0].spriteRenderer.color = Color.red;
                     sprites[i].spriteRenderer.color = Color.red;
                 }
-                else
-                {
-                    // Set the color of both sprites to white if there's no collision
-                    //sprites[0].spriteRenderer.color = Color.white;
-                    sprites[i].spriteRenderer.color = Color.white;
-                }
             }
             
             else
@@ -58,12 +61,6 @@ public class CollisionManager : MonoBehaviour
                 {
                     sprites[0].spriteRenderer.color = Color.red;
                     sprites[i].spriteRenderer.color = Color.red;
-                }
-                else
-                {
-                    // Set the color of both sprites to white if there's no collision
-                    sprites[0].spriteRenderer.color = Color.white;
-                    sprites[i].spriteRenderer.color = Color.white;
                 }
             }
             
