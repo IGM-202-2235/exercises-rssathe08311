@@ -11,7 +11,7 @@ public class SpriteInfo : MonoBehaviour
     //Circle
     public float radius;
 
-    SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class SpriteInfo : MonoBehaviour
         min = spriteRenderer.bounds.min;
         max = spriteRenderer.bounds.max;
 
-        radius = spriteRenderer.bounds.extents.x;
+        radius = spriteRenderer.bounds.extents.y;
     }
 
     // Update is called once per frame
