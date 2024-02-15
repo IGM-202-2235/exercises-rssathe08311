@@ -66,4 +66,6 @@ public class MovementController : MonoBehaviour
             objectPosition.x *= -1;
         }
     }
+
+
 }

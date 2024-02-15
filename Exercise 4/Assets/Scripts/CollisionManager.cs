@@ -23,7 +23,7 @@ public class CollisionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Mouse.current.leftButton.IsPressed())
+        if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             if (aabbCol)
             {
