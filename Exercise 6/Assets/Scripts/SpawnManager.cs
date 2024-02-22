@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//enum to refer to the different types of animal sprites
 public enum AnimalTypes
 {
     Elephant,
@@ -16,13 +17,13 @@ public class SpawnManager : Singleton<SpawnManager>
     // (Optional) Prevent non-singleton constructor use.
     protected SpawnManager() { }
 
-    public SpriteRenderer animalPrefab;
+    public SpriteRenderer animalPrefab;//reference to the animal prefab
 
-    public List<Sprite> animalSprites;
+    public List<Sprite> animalSprites;//list of animal sprites to be populated in the inspector
 
-    public int animalCount;
+    public int animalCount;//variable to dictate how many animals to spawn
 
-    List<SpriteRenderer> spawnedAnimals = new List<SpriteRenderer>();
+    List<SpriteRenderer> spawnedAnimals = new List<SpriteRenderer>();//list of animals displaying 
 
     // Start is called before the first frame update
     void Start(){}
@@ -37,6 +38,7 @@ public class SpawnManager : Singleton<SpawnManager>
         //clears the old list and old animals
         CleanUp();
 
+        //spawns animals
         for (int i = 0; i < animalCount; i++)
         {
             SpawnAnimal(PickRandomCreature());
@@ -61,6 +63,7 @@ public class SpawnManager : Singleton<SpawnManager>
         spawnedAnimals.Add(newAnimal);
     }
 
+    //clears list and deletes objects from list and canvas
     public void CleanUp()
     {
         foreach(SpriteRenderer animal in spawnedAnimals)
@@ -72,6 +75,7 @@ public class SpawnManager : Singleton<SpawnManager>
         spawnedAnimals.Clear();
     }
 
+    //method to calculate a Gaussian Distribution 
     private float Gaussian(float mean, float stdDev)
     {
         float val1 = Random.Range(0f, 1f);
@@ -83,7 +87,7 @@ public class SpawnManager : Singleton<SpawnManager>
     }
 
 
-    //figure out how to write for the probablilities specified in the exercise
+    //method to pick creatures based upon probablilites stated in assignment
     AnimalTypes PickRandomCreature()
     {
         float randVal = Random.Range(0f, 1f);
