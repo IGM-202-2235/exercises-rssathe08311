@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7075954682763354232}
   - component: {fileID: 5408938203703611336}
   - component: {fileID: 8598734808821525393}
+  - component: {fileID: -8076658100617001301}
   m_Layer: 0
   m_Name: Small Monster
   m_TagString: Untagged
@@ -97,3 +98,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b3346ef2c951b4b9eaee84b8ded42c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mass: 0
+  maxSpeed: 0
+  useFriction: 0
+  useGravity: 0
+  frictionCoeef: 0
+  cameraObject: {fileID: 0}
+--- !u!114 &-8076658100617001301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5626168212028894356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d66ea342804634baee8bc15924ad98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  physicsObject: {fileID: 8598734808821525393}

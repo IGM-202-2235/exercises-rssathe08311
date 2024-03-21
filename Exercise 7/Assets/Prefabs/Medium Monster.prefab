@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4776979491419966997}
   - component: {fileID: 5258936269225832823}
   - component: {fileID: 7026406902007140225}
+  - component: {fileID: 3420329090740923339}
   m_Layer: 0
   m_Name: Medium Monster
   m_TagString: Untagged
@@ -97,3 +98,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b3346ef2c951b4b9eaee84b8ded42c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mass: 0
+  maxSpeed: 0
+  useFriction: 0
+  useGravity: 0
+  frictionCoeef: 0
+  cameraObject: {fileID: 0}
+--- !u!114 &3420329090740923339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7758105792593447749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d66ea342804634baee8bc15924ad98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  physicsObject: {fileID: 7026406902007140225}
