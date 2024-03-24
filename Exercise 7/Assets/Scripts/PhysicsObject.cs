@@ -9,6 +9,7 @@ public class PhysicsObject : MonoBehaviour
     private Vector3 velocity;
     private Vector3 acceleration;
 
+
     public Vector3 Direction
     {
         get
@@ -37,6 +38,9 @@ public class PhysicsObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+       
+
         if (useFriction)
         {
             ApplyFriction(frictionCoeef);
@@ -46,10 +50,12 @@ public class PhysicsObject : MonoBehaviour
         {
             ApplyGravity(Vector3.down * 9.8f);
         }
+        /*
         else
         {
             velocity = Vector3.zero;
         }
+        */
 
 
         //Calculate the velocity for this fram 

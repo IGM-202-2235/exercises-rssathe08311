@@ -281,7 +281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8749133731603715734, guid: 303642728b75c14449d1a903e33d629f, type: 3}
       propertyPath: mass
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8749133731603715734, guid: 303642728b75c14449d1a903e33d629f, type: 3}
       propertyPath: camera
@@ -293,7 +293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8749133731603715734, guid: 303642728b75c14449d1a903e33d629f, type: 3}
       propertyPath: useFriction
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8749133731603715734, guid: 303642728b75c14449d1a903e33d629f, type: 3}
       propertyPath: cameraObject
@@ -301,7 +301,7 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 8749133731603715734, guid: 303642728b75c14449d1a903e33d629f, type: 3}
       propertyPath: frictionCoeef
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -370,7 +370,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7026406902007140225, guid: b344c461fd5f1474fb6b9f6c8050c9d6, type: 3}
       propertyPath: mass
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7026406902007140225, guid: b344c461fd5f1474fb6b9f6c8050c9d6, type: 3}
       propertyPath: camera
@@ -462,12 +462,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 519420031}
     - target: {fileID: 8598734808821525393, guid: 2e995e02a13f9174898c56374551b49d, type: 3}
+      propertyPath: useGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598734808821525393, guid: 2e995e02a13f9174898c56374551b49d, type: 3}
+      propertyPath: useFriction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598734808821525393, guid: 2e995e02a13f9174898c56374551b49d, type: 3}
       propertyPath: cameraObject
       value: 
       objectReference: {fileID: 519420031}
     - target: {fileID: 8598734808821525393, guid: 2e995e02a13f9174898c56374551b49d, type: 3}
       propertyPath: frictionCoeef
-      value: 0
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
