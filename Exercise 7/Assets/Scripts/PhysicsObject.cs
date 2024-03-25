@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PhysicsObject : MonoBehaviour
 {
-    private Vector3 position;
+    public Vector3 position;
     private Vector3 direction;
-    private Vector3 velocity;
-    private Vector3 acceleration;
+    public Vector3 velocity;
+    public Vector3 acceleration;
 
 
     public Vector3 Direction
