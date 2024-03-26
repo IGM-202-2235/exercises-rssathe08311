@@ -274,8 +274,53 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9130510108998632150, guid: 91fb5c35f02366446ac653161ca22cb3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2095448010903089190}
+    - targetCorrespondingSourceObject: {fileID: 9130510108998632150, guid: 91fb5c35f02366446ac653161ca22cb3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2095448010903089189}
   m_SourcePrefab: {fileID: 100100000, guid: 91fb5c35f02366446ac653161ca22cb3, type: 3}
+--- !u!1 &2095448010903089188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9130510108998632150, guid: 91fb5c35f02366446ac653161ca22cb3, type: 3}
+  m_PrefabInstance: {fileID: 2095448010903089187}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2095448010903089189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095448010903089188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b97c821353f59c438122a063a775358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  physicsObject: {fileID: 0}
+--- !u!114 &2095448010903089190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095448010903089188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b3346ef2c951b4b9eaee84b8ded42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  acceleration: {x: 0, y: 0, z: 0}
+  mass: 1
+  maxSpeed: 0
+  useFriction: 0
+  useGravity: 0
+  frictionCoeef: 0
+  cameraObject: {fileID: 29255855}
 --- !u!1001 &2627869800441891284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -335,5 +380,50 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7635114745780379457, guid: 4a169ee13d9c3e14ba814615de7267e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2627869800441891287}
+    - targetCorrespondingSourceObject: {fileID: 7635114745780379457, guid: 4a169ee13d9c3e14ba814615de7267e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2627869800441891286}
   m_SourcePrefab: {fileID: 100100000, guid: 4a169ee13d9c3e14ba814615de7267e4, type: 3}
+--- !u!1 &2627869800441891285 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7635114745780379457, guid: 4a169ee13d9c3e14ba814615de7267e4, type: 3}
+  m_PrefabInstance: {fileID: 2627869800441891284}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2627869800441891286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2627869800441891285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880bc899a7836bf439578ec481bc32ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  physicsObject: {fileID: 2627869800441891287}
+--- !u!114 &2627869800441891287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2627869800441891285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b3346ef2c951b4b9eaee84b8ded42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  acceleration: {x: 0, y: 0, z: 0}
+  mass: 1
+  maxSpeed: 0
+  useFriction: 0
+  useGravity: 0
+  frictionCoeef: 0
+  cameraObject: {fileID: 29255855}

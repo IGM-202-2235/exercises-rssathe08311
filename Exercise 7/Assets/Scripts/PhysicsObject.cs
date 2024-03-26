@@ -19,7 +19,9 @@ public class PhysicsObject : MonoBehaviour
     }
 
     [SerializeField]
-    public float mass, maxSpeed;
+    float mass = 1f;
+
+    public float maxSpeed;
 
     //things that might go away
     public bool useFriction, useGravity;
@@ -61,12 +63,16 @@ public class PhysicsObject : MonoBehaviour
         //Calculate the velocity for this fram 
         velocity += acceleration * Time.deltaTime;
 
-        Bounce();
+        //limit how much velocity an object can observe each frame
+        velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
+
 
         position += velocity * Time.deltaTime;
 
         //Grab current direction from velocity
         direction = velocity.normalized;
+
+        Bounce();
 
         transform.position = position;
 
