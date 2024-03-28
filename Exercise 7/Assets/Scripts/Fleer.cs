@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Fleer : Agent
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Agent target;
 
-    // Update is called once per frame
-    void Update()
+    protected override Vector3 CalculateSteeringForces()
     {
-        
+        Vector3 fleeForce = Flee(target);
+
+        return fleeForce;
     }
 }

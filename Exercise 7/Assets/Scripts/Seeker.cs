@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Seeker : Agent
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] Agent target;
+
+
+    protected override Vector3 CalculateSteeringForces()
     {
-        
+        Vector3 seekForce = Seek(target);
+
+        return seekForce;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

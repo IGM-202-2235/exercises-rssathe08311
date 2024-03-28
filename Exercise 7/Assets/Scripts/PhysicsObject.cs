@@ -23,6 +23,8 @@ public class PhysicsObject : MonoBehaviour
 
     public float maxSpeed;
 
+    [SerializeField] SpriteRenderer spriteRenderer;
+
     //things that might go away
     public bool useFriction, useGravity;
 
@@ -31,17 +33,21 @@ public class PhysicsObject : MonoBehaviour
 
     [SerializeField] Camera cameraObject;
 
+    public float radius;
+
     // Start is called before the first frame update
     void Start()
     {
         position = transform.position;
+
+        radius = spriteRenderer.bounds.extents.y;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-       
+        
 
         if (useFriction)
         {
@@ -71,6 +77,8 @@ public class PhysicsObject : MonoBehaviour
 
         //Grab current direction from velocity
         direction = velocity.normalized;
+        //Quaternion.LookRotation(direction);
+        //transform.rotation = Quaternion.LookRotation(Vector3.up, direction);
 
         Bounce();
 
