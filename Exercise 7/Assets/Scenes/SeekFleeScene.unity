@@ -363,7 +363,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
   mass: 3
-  maxSpeed: 5
+  maxSpeed: 10
   spriteRenderer: {fileID: 2095448010903089191}
   useFriction: 0
   useGravity: 0
