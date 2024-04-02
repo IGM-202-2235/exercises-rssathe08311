@@ -66,4 +66,30 @@ public abstract class Agent : MonoBehaviour
         return Flee(target.transform.position);
     }
 
+    //the only difference between evade and flee is target.calcFuturePosition * time
+    public Vector3 Evade(Agent target)
+    {
+        return Flee(target.CalcFuturePosition(5f));
+    }
+
+    public Vector3 CalcFuturePosition(float futureTime)
+    {
+        return transform.position + (physicsObject.Direction * futureTime);
+    }
+
+    public Vector3 Wander(float futureTime, float circleRadius)
+    {
+        Vector3 futurePosition = CalcFuturePosition(futureTime);
+
+        float randAngle = Random.Range(0f, Mathf.PI * 2f);
+
+        Vector3 wanderPoint = futurePosition;
+
+        wanderPoint.x += Mathf.Cos(randAngle) * circleRadius;
+        wanderPoint.y += Mathf.Sin(randAngle) * circleRadius;
+        
+
+
+        return Seek(wanderPoint);
+    }
 }
