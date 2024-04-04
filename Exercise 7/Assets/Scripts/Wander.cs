@@ -6,11 +6,18 @@ public class Wanderer : Agent
 {
     [SerializeField] float wanderTime = 1f;
     [SerializeField] float wanderRadius = 1f;
+    [SerializeField] float range = 3f;
+
+    [SerializeField] float boundsWeight = 2f;
 
 
     protected override Vector3 CalculateSteeringForces()
     {
-        Vector3 wanderForce = Wander(wanderTime, wanderRadius);
+        Vector3 wanderForce = Vector3.zero;
+
+
+        wanderForce += Wander(wanderTime, wanderRadius, range);
+        wanderForce += StayInBounds() * boundsWeight;
 
         return wanderForce;
     }

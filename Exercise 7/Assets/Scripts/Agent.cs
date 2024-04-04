@@ -1,24 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public abstract class Agent : MonoBehaviour
 {
 
     [SerializeField] public PhysicsObject physicsObject;
+    float randAngle;
 
+
+    protected Vector3 totalForce = Vector3.zero;
+    float maxForce = 5f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        randAngle = Random.Range(0f, Mathf.PI * 2f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 force = CalculateSteeringForces();
-        physicsObject.ApplyForce(force);
+        totalForce += CalculateSteeringForces();
+
+        totalForce = Vector3.ClampMagnitude(totalForce, maxForce);
+
+        physicsObject.ApplyForce(totalForce);
+
+        totalForce = Vector3.zero;
 
     }
 
@@ -77,11 +87,13 @@ public abstract class Agent : MonoBehaviour
         return transform.position + (physicsObject.Direction * futureTime);
     }
 
-    public Vector3 Wander(float futureTime, float circleRadius)
+    public Vector3 Wander(float futureTime, float circleRadius, float range)
     {
         Vector3 futurePosition = CalcFuturePosition(futureTime);
 
-        float randAngle = Random.Range(0f, Mathf.PI * 2f);
+        float rad = range * Mathf.Deg2Rad;
+
+        randAngle += Random.Range((rad * -1), rad);
 
         Vector3 wanderPoint = futurePosition;
 
@@ -91,5 +103,36 @@ public abstract class Agent : MonoBehaviour
 
 
         return Seek(wanderPoint);
+    }
+
+    public Vector3 StayInBounds()
+    {
+        Vector3 steeringForce = Vector3.zero;
+
+        Debug.Log((CheckIfInBounds(transform.position)));
+        //Do stuff
+        if(!CheckIfInBounds(transform.position))
+        {
+            steeringForce = Seek(Vector3.zero);
+        }
+
+        return steeringForce;
+    }
+
+    protected bool CheckIfInBounds(Vector3 position)
+    {
+        float totalCamHeight = (physicsObject.cameraObject.orthographicSize * 2f) / 2;
+        float totalCamWidth = (totalCamHeight * physicsObject.cameraObject.aspect);
+
+        if (position.y > totalCamHeight || (position.y < (totalCamHeight * -1)))
+        {
+            return false;
+        }
+        if (position.x > totalCamWidth || (position.x < (totalCamWidth * -1)))
+        {
+            return false;
+        }
+        
+        return true;
     }
 }

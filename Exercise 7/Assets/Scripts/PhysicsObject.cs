@@ -31,7 +31,7 @@ public class PhysicsObject : MonoBehaviour
     [SerializeField]
     float frictionCoeef = 0;
 
-    [SerializeField] Camera cameraObject;
+    [SerializeField] public Camera cameraObject;
 
     public float radius;
 
@@ -84,7 +84,7 @@ public class PhysicsObject : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, spriteRotation, 360f * Time.deltaTime);
         }
 
-        Bounce();
+        //Bounce();
 
         transform.position = position;
 
