@@ -31,7 +31,6 @@ public class PhysicsObject : MonoBehaviour
     [SerializeField]
     float frictionCoeef = 0;
 
-    [SerializeField] public Camera cameraObject;
 
     public float radius;
 
@@ -118,8 +117,8 @@ public class PhysicsObject : MonoBehaviour
 
     void Bounce()
     {
-        float totalCamHeight = (cameraObject.orthographicSize * 2f) / 2;
-        float totalCamWidth = (totalCamHeight * cameraObject.aspect);
+        float totalCamHeight = (Camera.main.orthographicSize * 2f) / 2;
+        float totalCamWidth = (totalCamHeight * Camera.main.aspect);
 
         if (position.y >= totalCamHeight) 
         {

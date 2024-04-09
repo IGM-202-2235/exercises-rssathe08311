@@ -13,6 +13,8 @@ public abstract class Agent : MonoBehaviour
     protected Vector3 totalForce = Vector3.zero;
     float maxForce = 5f;
 
+    public AgentManager agentManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -121,8 +123,8 @@ public abstract class Agent : MonoBehaviour
 
     protected bool CheckIfInBounds(Vector3 position)
     {
-        float totalCamHeight = (physicsObject.cameraObject.orthographicSize * 2f) / 2;
-        float totalCamWidth = (totalCamHeight * physicsObject.cameraObject.aspect);
+        float totalCamHeight = (Camera.main.orthographicSize * 2f) / 2;
+        float totalCamWidth = (totalCamHeight * Camera.main.aspect);
 
         if (position.y > totalCamHeight || (position.y < (totalCamHeight * -1)))
         {
