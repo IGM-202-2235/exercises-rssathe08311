@@ -215,6 +215,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &637020599 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3569629928056098894, guid: 303642728b75c14449d1a903e33d629f, type: 3}
+  m_PrefabInstance: {fileID: 14868226443289778}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1017860892 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5408938203703611336, guid: 2e995e02a13f9174898c56374551b49d, type: 3}
+  m_PrefabInstance: {fileID: 8889154125899808454}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1382205588 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5258936269225832823, guid: b344c461fd5f1474fb6b9f6c8050c9d6, type: 3}
+  m_PrefabInstance: {fileID: 3718094378053249690}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &14868226443289778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -303,6 +318,10 @@ PrefabInstance:
       propertyPath: frictionCoeef
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8749133731603715734, guid: 303642728b75c14449d1a903e33d629f, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 637020599}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -388,6 +407,10 @@ PrefabInstance:
       propertyPath: cameraObject
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 7026406902007140225, guid: b344c461fd5f1474fb6b9f6c8050c9d6, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1382205588}
     - target: {fileID: 7758105792593447749, guid: b344c461fd5f1474fb6b9f6c8050c9d6, type: 3}
       propertyPath: m_Name
       value: Medium Monster
@@ -477,6 +500,10 @@ PrefabInstance:
       propertyPath: frictionCoeef
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 8598734808821525393, guid: 2e995e02a13f9174898c56374551b49d, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1017860892}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -137,4 +137,11 @@ public abstract class Agent : MonoBehaviour
         
         return true;
     }
+
+    public Vector3 Seperate()
+    {
+        return Vector3.zero;
+    }
+
+    //alignment - seek the average location of the flock, dont use seek or flee instead desired velocity - current velocity like those two functions 
 }
